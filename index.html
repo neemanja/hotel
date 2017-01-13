@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HOTEL</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+
+<body ng-app="hotelApp">
+
+    <div class="orange">HALLO WORLD</div>
+    <div ng-controller="listCtrl">
+        <button type="button" ng-click="searchForHotels()" class="button">Load Hotels</button>
+        <div ng-if="areHotelsDisplayed()">
+            <h2>SOME HOTELS</h2>
+            <hotel ng-repeat="hotel in hotels" item="hotel"></hotel>
+        </div>
+        <div ng-if="isErrorDisplayed()">
+            <message message-title="TITLE" message-text="TEXT"></message>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/configs/config.js"></script>
+    <script src="js/services/hotelService.js"></script>
+    <script src="js/services/reviewService.js"></script>
+    <script src="js/controllers/listCtrl.js"></script>
+    <script src="js/directives/hotel.js"></script>
+    <script src="js/directives/review.js"></script>
+    <script src="js/directives/message.js"></script>
+</body>
+
+</html>

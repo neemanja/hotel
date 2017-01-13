@@ -1,0 +1,7 @@
+.orange {
+    border: 1px solid var(--color-orange, #fff);
+}
+
+.button {
+    color: var(--color-orange, #fff);
+}
