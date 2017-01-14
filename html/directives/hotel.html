@@ -16,7 +16,7 @@
             </div>
             <div class="hotel__data-bottom">
                 <div class="hotel__data-bottom__reviews">
-                    <button type="button" class="button" ng-click="areReviewsDisplayed() ?hideReviews() : searchForReviews()">Show reviews</button>
+                    <button type="button" class="button" ng-click="areReviewsDisplayed() ?hideReviews() : searchForReviews()">{{areReviewsDisplayed() ? 'Hide reviews' : 'Show reviews'}}</button>
                 </div>
                 <div class="hotel__data-bottom__price">
                     <div class="hotel__data-bottom__price-amount">{{item.price}}&#160;&#8364;</div>
