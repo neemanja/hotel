@@ -1,0 +1,37 @@
+<div class="hotel">
+    <div class="hotel-info">
+        <div class="hotel__image-box">
+            <img class="hotel__image hotel__image--cover" src="{{item.images[0]}}" />
+        </div>
+        <div class="hotel__data-box">
+            <div class="hotel__data-top">
+                <div class="hotel__data-top__title">
+                    <div class="hotel__data-top__title-name">{{item.name}}</div>
+                    <div class="hotel__data-top__title-city">{{item.city}}&#160;-&#160;{{item.country}}</div>
+                </div>
+                <div class="hotel__data-top__stars" ng-bind-html="stars"></div>
+            </div>
+            <div class="hotel__data-middle">
+                <div class="hotel__data-middle__description">{{item.description}}</div>
+            </div>
+            <div class="hotel__data-bottom">
+                <div class="hotel__data-bottom__reviews">
+                    <button type="button" class="button" ng-click="areReviewsDisplayed() ?hideReviews() : searchForReviews()">Show reviews</button>
+                </div>
+                <div class="hotel__data-bottom__price">
+                    <div class="hotel__data-bottom__price-amount">{{item.price}}&#160;&#8364;</div>
+                    <div class="hotel__data-bottom__price-date">{{item.date_start | date : 'dd.MM.yyyy'}}&#160;-&#160;{{item.date_end | date : 'dd.MM.yyyy'}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hotel-reviews" ng-if="areReviewsDisplayed()">
+        <div ng-repeat="review in reviews" class="hotel-review">
+            <div class="hotel-review__status circle">{{review.positive===true ? '+' : '&#8722;'}}</div>
+            <div class="hotel-review__data">
+                <div class="hotel-review__data-name">{{review.name}}</div>
+                <div class="hotel-review__data-comment">{{review.comment}}</div>
+            </div>
+        </div>
+    </div>
+</div>

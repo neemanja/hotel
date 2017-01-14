@@ -10,17 +10,15 @@
 
 </head>
 
-<body ng-app="hotelApp">
+<body ng-app="hotelApp" class="page">
 
-    <div class="orange">HALLO WORLD</div>
-    <div ng-controller="listCtrl">
-        <button type="button" ng-click="searchForHotels()" class="button">Load Hotels</button>
+    <div ng-controller="listCtrl" class="page__frame">
+        <button type="button" ng-click="searchForHotels()" class="button button--search">Load Hotels</button>
         <div ng-if="areHotelsDisplayed()">
-            <h2>SOME HOTELS</h2>
             <hotel ng-repeat="hotel in hotels" item="hotel"></hotel>
         </div>
         <div ng-if="isErrorDisplayed()">
-            <message message-title="TITLE" message-text="TEXT"></message>
+            <message message-title="An error occured" message-text="{{error}}"></message>
         </div>
     </div>
 

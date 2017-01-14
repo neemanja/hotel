@@ -1,7 +1,50 @@
-.orange {
-    border: 1px solid var(--color-orange, #fff);
+.page {
+    background-color: white;
+    color: dimgray;
+    line-height: 1.2rem;
+    font-size: 1rem;
+}
+
+.page__frame {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1438px) {
+    .page__frame {
+        width: 944px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .page__frame {
+        width: 884px;
+    }
 }
 
 .button {
-    color: var(--color-orange, #fff);
+    background-color: gainsboro;
+    padding: 5px 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: pointer;
 }
+
+.button.button--search {
+    margin: auto;
+    display: inherit;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: gainsboro;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+
+/**/

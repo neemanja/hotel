@@ -1,0 +1,18 @@
+.message {
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inherit;
+    margin: 20px auto;
+    padding: 20px
+}
+
+.message__title {
+    font-weight: bold;
+}
+
+.message__text {
+    font-style: italic;
+}

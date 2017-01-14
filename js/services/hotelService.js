@@ -6,7 +6,7 @@ angular.module('services')
                 $http.get(config.API_HOST + config.HOTEL_PATH + '?count=' + config.HOTEL_COUNT).then(function (response) {
                     deferred.resolve(response.data);
                 }, function (error) {
-                    deferred.reject(error.data);
+                    deferred.reject(error.data.error);
                 });
                 return deferred.promise;
             }
