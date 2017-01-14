@@ -93,9 +93,11 @@
 }
 
 .hotel-review__status {
+    max-width: 30px;
     margin-top: 25px;
     text-align: center;
     line-height: 30px;
+    flex: 1 0 auto;
 }
 
 .hotel-review__data {
