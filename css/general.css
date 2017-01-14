@@ -12,16 +12,27 @@
 
 @media (max-width: 1438px) {
     .page__frame {
-        width: 944px;
+        width: 1100px;
     }
 }
 
 @media (max-width: 1170px) {
     .page__frame {
-        width: 884px;
+        width: 900px;
     }
 }
 
+@media (max-width: 1020px) {
+    .page__frame {
+        width: 750px;
+    }
+}
+
+@media (max-width: 760px) {
+    .page__frame {
+        width: 700px;
+    }
+}
 .button {
     background-color: gainsboro;
     padding: 5px 20px;
