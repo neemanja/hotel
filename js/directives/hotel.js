@@ -46,7 +46,7 @@ angular.module('directives')
                 scope.hideReviews = function () {
                     reviewsDisplayed = false;
                     scope.reviews = [];
-                }
+                };
             }
         };
     });

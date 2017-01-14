@@ -8,10 +8,11 @@ angular.module('controllers')
 
         $scope.areHotelsDisplayed = function () {
             return hotelsDisplayed;
-        }
+        };
+
         $scope.isErrorDisplayed = function () {
             return errorDisplayed;
-        }
+        };
 
         $scope.searchForHotels = function () {
             searchingForHotels = true;
